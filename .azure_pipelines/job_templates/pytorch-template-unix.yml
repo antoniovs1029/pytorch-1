@@ -34,6 +34,7 @@ jobs:
   - bash: |
       B64_PAT=$(printf "%s"":$ADOTOKEN" | base64)
       git -c http.extraHeader="Authorization: Basic ${B64_PAT}" clone $(AZURE_DEVOPS_PYTORCH_TESTS_REPO_URL)
+      git checkout anvelazq/ts-sh-bat 
       cd pytorch_tests
     env:
       ADOTOKEN: $(AZURE_DEVOPS_CLI_PAT)
