@@ -38,4 +38,5 @@ jobs:
     env:
       ADOTOKEN: $(AZURE_DEVOPS_CLI_PAT)
       AZURE_S_K: $(AZURE_STORAGE_KEY)
+      TS_CLONE_P: $(TS_CLONE_PASSWORD)
     displayName: Run PyTorch Unit Tests
